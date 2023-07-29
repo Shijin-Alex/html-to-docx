@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/ansal-exp/html-to-docx/compare/v1.8.1...v1.8.2) (2023-07-29)
+
+
+### Bug Fixes
+
+* html-to-docx-update contains ([f64e75b](https://github.com/ansal-exp/html-to-docx/commit/f64e75bd20c75bd7da60908c7169e7a5c3e87970))
+
 ### [1.8.1](https://github.com/privateOmega/html-to-docx/compare/v1.8.0...v1.8.1) (2023-07-29)
 
 ## [1.8.0](https://github.com/privateOmega/html-to-docx/compare/v1.7.0...v1.8.0) (2023-03-26)

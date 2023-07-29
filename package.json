@@ -1,6 +1,6 @@
 {
   "name": "html-to-docx-update",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "HTML to DOCX converter - updated",
   "keywords": [
     "html",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/privateOmega/html-to-docx.git"
+    "url": "git+https://github.com/ansal-exp/html-to-docx.git"
   },
   "author": "privateOmega <privateOmega@protonmail.com>",
   "contributors": [
@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/privateOmega/html-to-docx/issues"
+    "url": "https://github.com/ansal-exp/html-to-docx/issues"
   },
-  "homepage": "https://github.com/privateOmega/html-to-docx#readme",
+  "homepage": "https://github.com/ansal-exp/html-to-docx/issues#readme",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
