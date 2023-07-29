@@ -21,7 +21,6 @@ const generateStylesXML = (
 	  </w:rPrDefault>
 	  <w:pPrDefault>
 		<w:pPr>
-		  <w:spacing w:after="120" w:line="240" w:lineRule="atLeast" />
 		</w:pPr>
 	  </w:pPrDefault>
 	</w:docDefaults>

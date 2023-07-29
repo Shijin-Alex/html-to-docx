@@ -1,4 +1,4 @@
-html-to-docx
+html-to-docx-update
 ============
 
 [![NPM Version][npm-image]][npm-url]
@@ -8,6 +8,12 @@ html-to-docx is a js library for converting HTML documents to DOCX format suppor
 It was inspired by [html-docx-js] project but mitigates the problem of documents generated being non-compatiable with word processors like Google Docs and libreOffice Writer that doesn't support [altchunks] feature.
 
 html-to-docx earlier used to use [libtidy] to clean up the html before parsing, but had to remove it since it was causing so many dependency issues due to node-gyp.
+
+### important
+html-to-docx-update contains 
+
+  - footer page number like ``page 1 of 3``
+  - paragraph spacing removed
 
 ### Disclaimer
 

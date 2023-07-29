@@ -93,7 +93,19 @@ async function generateSectionXML(vTree, type = 'header') {
   const XMLFragment = fragment();
   await convertVTreeToXML(this, vTree, XMLFragment);
   if (type === 'footer' && XMLFragment.first().node.tagName === 'p' && this.pageNumber) {
-    XMLFragment.first().import(
+    XMLFragment.last().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'r')
+        .ele('@w', 'pPr')
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' ')
+        .up()
+        .up()
+        .up()
+    );
+
+    XMLFragment.last().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'fldSimple')
         .att('@w', 'instr', 'PAGE')
@@ -101,9 +113,29 @@ async function generateSectionXML(vTree, type = 'header') {
         .up()
         .up()
     );
+
+    XMLFragment.last().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'r')
+        .ele('@w', 'pPr')
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' of ')
+        .up()
+        .up()
+        .up()
+    );
+
+    XMLFragment.last().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'fldSimple')
+        .att('@w', 'instr', 'NUMPAGES')
+        .ele('@w', 'r')
+        .up()
+        .up()
+    );
   }
   sectionXML.root().import(XMLFragment);
-
   const referenceName = type === 'header' ? 'Header' : 'Footer';
   this[`last${referenceName}Id`] += 1;
 
