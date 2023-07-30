@@ -1,4 +1,4 @@
-import { create } from 'xmlbuilder2';
+import { create, fragment } from 'xmlbuilder2';
 import VNode from 'virtual-dom/vnode/vnode';
 import VText from 'virtual-dom/vnode/vtext';
 // eslint-disable-next-line import/no-named-default
@@ -33,6 +33,7 @@ import {
   themeFolder,
   themeType,
 } from './constants';
+import namespaces from './namespaces';
 
 const convertHTML = HTMLToVDOM({
   VNode,
@@ -184,8 +185,81 @@ async function addFilesToContainer(
       fileNameWithExt,
       internalRelationship
     );
+    // const XMLFragment = fragment();
+    const XMLFragment = fragment({ namespaceAlias: { w: namespaces.w } })
+      .ele('@w', 'p')
+      .up();
 
-    zip.folder(wordFolder).file(fileNameWithExt, footerXML.toString({ prettyPrint: true }), {
+    // console.log('XMLFragment:', XMLFragment.toString());
+
+    const footerXMLString = footerXML.toString({ prettyPrint: true });
+    XMLFragment.first().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'r')
+        .ele('@w', 'pPr')
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' Page ')
+        .up()
+        .up()
+        .up()
+    );
+
+    XMLFragment.first().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'fldSimple')
+        .att('@w', 'instr', 'PAGE')
+        .ele('@w', 'r')
+        .up()
+        .up()
+    );
+
+    XMLFragment.first().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'r')
+        .ele('@w', 'pPr')
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' of ')
+        .up()
+        .up()
+        .up()
+    );
+
+    XMLFragment.first().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'fldSimple')
+        .att('@w', 'instr', 'NUMPAGES')
+        .ele('@w', 'r')
+        .up()
+        .up()
+    );
+    const fragmentString = XMLFragment.toString({ prettyPrint: true });
+    // const ftrSplits = footerXMLString.split('Page');
+    const index = footerXMLString.lastIndexOf('Page');
+    let footerStr = footerXMLString;
+
+    if (index !== -1) {
+      let first = footerXMLString.substring(0, index);
+      let last = footerXMLString.substring(index + 4, footerXMLString.length);
+      const tsIndex = first.lastIndexOf('<');
+      const tcIndex = last.indexOf('>');
+      first = first.substring(0, tsIndex);
+      last = last.substring(tcIndex);
+      footerStr = first + fragmentString + last;
+    }
+
+    // if (ftrSplits.length > 1) {
+    //   const secondLastItem = ftrSplits[ftrSplits.length - 2];
+    //   const lastItem = ftrSplits[ftrSplits.length - 1];
+    //   const index = secondLastItem.lastIndexOf('<');
+    //   ftrSplits[ftrSplits.length - 2] = secondLastItem.substring(0, index);
+    //   const index1 = lastItem.indexOf('>');
+    //   ftrSplits[ftrSplits.length - 1] = fragmentString + lastItem.substring(index1);
+    // }
+    // const footerStr = ftrSplits.join('');
+
+    zip.folder(wordFolder).file(fileNameWithExt, footerStr, {
       createFolders: false,
     });
 

@@ -225,49 +225,53 @@ const htmlString = `<!DOCTYPE html>
       pageNumber: true,
     },
     `
-    <div>
-    <table>
-    <tbody>
-      <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
-        <td style="width: 225.4pt; border: solid windowtext 1.0pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="color: #ed7d31; mso-themecolor: accent2;">State</span>
-          </p>
-        </td>
-        <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-left: none; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="color: #ed7d31; mso-themecolor: accent2;">Capital</span>
-          </p>
-        </td>
-      </tr>
-      <tr style="mso-yfti-irow: 1;">
-        <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="color: black; mso-color-alt: windowtext;"> kerala ww</span>
-          </p>
-        </td>
-        <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; background: #FBE4D5; mso-background-themecolor: accent2; mso-background-themetint: 51; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="color: black; mso-color-alt: windowtext;">tvm</span>
-          </p>
-        </td>
-      </tr>
-      <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes;">
-        <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="background: yellow; mso-highlight: yellow;">TN</span>
-          </p>
-        </td>
-        <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
-          <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
-            <span style="color: #c5e0b4; mso-themecolor: accent6; mso-themetint: 102; mso-style-textfill-fill-color: #C5E0B4; mso-style-textfill-fill-themecolor: accent6; mso-style-textfill-fill-alpha: 100.0%; mso-style-textfill-fill-colortransforms: 'lumm=40000 lumo=60000';">chennai</span>
-          </p>
-        </td>
-      </tr>
-    </tbody>
-    </table>
-    </<div>
-    <p>Pac Rim 1.0    <span style="color:red;">REVISED 07/29/2022</span>    Pacific Rim ISG Intellectual Property - All Rights Reserved</p>`
+    <p class="MsoNormal" style="text-align: right; mso-pagination: widow-orphan; tab-stops: center 234.0pt right 468.0pt; punctuation-wrap: simple; text-autospace: none;" align="right"><span lang="EN-US" style="font-size: 9.0pt; mso-bidi-font-size: 10.0pt; mso-fareast-language: EN-US;">&nbsp;</span></p><div><table class="MsoNormalTable" style="width: 98%; border-collapse: collapse; border: none"  cellspacing="0" cellpadding="0"><tbody><tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes;" ><td style="width: 106.45pt;  padding: 0cm 5.4pt 0cm 5.4pt; border: 1pt solid windowtext;" width="142" colspan="2"><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><strong><span lang="EN-US" style="font-size: 7.5pt; mso-fareast-language: EN-US; mso-no-proof: yes;">Incident #:</span></strong><span lang="EN-US" style="font-size: 7.5pt; color: blue; mso-fareast-language: EN-US; mso-no-proof: yes;"> {{case number TE}}</span></p></td><td style="width: 333.0pt; border-top: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; border-left: none;  padding: 0cm 5.4pt 0cm 5.4pt;" width="444" ><p class="MsoNormal" style="margin-left: 8.4pt; text-indent: -8.4pt; mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><strong><span lang="EN-US" style="font-size: 7.5pt; mso-fareast-language: EN-US;">Investigator: </span></strong><span lang="EN-US" style="font-size: 7.5pt; color: blue; mso-fareast-language: EN-US;">{{investigator name MC}}</span></p></td><td style="width: 380.5pt;  border-top: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;" width="153" colspan="2"><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><strong><span lang="EN-US" style="font-size: 7.5pt; mso-fareast-language: EN-US; mso-no-proof: yes;">Date of Fire:</span></strong><span lang="EN-US" style="font-size: 7.5pt; mso-fareast-language: EN-US; mso-no-proof: yes;"> </span><span lang="EN-US" style="font-size: 7.5pt; color: blue; mso-fareast-language: EN-US;">{{date of loss DA}}</span></p></td></tr><tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes; border: none;"><td style="width: 106.45pt;  padding: 0cm 5.4pt 0cm 5.4pt;" width="142"><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><span lang="EN-US" style="font-size: 7.0pt; font-family: 'Arial',sans-serif; color: blue; mso-fareast-language: EN-US; mso-no-proof: yes;"><span style="mso-spacerun: yes;"> </span>Pac Rim 1.0<span style="mso-spacerun: yes;"> </span></p></td><td style="width: 106.45pt;  padding: 0cm 5.4pt 0cm 5.4pt; " width="142"><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><span lang="EN-US" style="font-size: 7.0pt; font-family: 'Arial',sans-serif; color: blue; mso-fareast-language: EN-US; mso-no-proof: yes;"><span style="mso-spacerun: yes;"> </span>REVISED 07/29/2022<span style="mso-spacerun: yes;"> </span></p></td><td style="width: 140.45pt;  padding: 0cm 5.4pt 0cm 5.4pt; " width="142" colspan="2"><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><span style="mso-spacerun: yes;"></span></span></strong><span lang="EN-US" style="font-size: 7.0pt; font-family: 'Arial',sans-serif;">Pacific Rim ISG<strong style="mso-bidi-font-weight: normal;"> </strong>Intellectual Property - All Rights Reserved</span></p></td><td style="width: 60pt;  padding: 0cm 5.4pt 0cm 5.4pt;" ><p class="MsoNormal" style="mso-pagination: widow-orphan; punctuation-wrap: simple; text-autospace: none;"><span lang="EN-US" style="font-size: 10.0pt; mso-fareast-language: EN-US;"><span style="mso-spacerun: yes;">Page </p></td></tr></tbody></table></div>
+    `
+
+    // `
+    // <div>
+    // <table>
+    // <tbody>
+    //   <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+    //     <td style="width: 225.4pt; border: solid windowtext 1.0pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="color: #ed7d31; mso-themecolor: accent2;">State</span>
+    //       </p>
+    //     </td>
+    //     <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-left: none; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="color: #ed7d31; mso-themecolor: accent2;">Capital</span>
+    //       </p>
+    //     </td>
+    //   </tr>
+    //   <tr style="mso-yfti-irow: 1;">
+    //     <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; background: #D9E2F3; mso-background-themecolor: accent1; mso-background-themetint: 51; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="color: black; mso-color-alt: windowtext;"> kerala ww</span>
+    //       </p>
+    //     </td>
+    //     <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; background: #FBE4D5; mso-background-themecolor: accent2; mso-background-themetint: 51; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="color: black; mso-color-alt: windowtext;">tvm</span>
+    //       </p>
+    //     </td>
+    //   </tr>
+    //   <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes;">
+    //     <td style="width: 225.4pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="background: yellow; mso-highlight: yellow;">TN</span>
+    //       </p>
+    //     </td>
+    //     <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="301">
+    //       <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">
+    //         <span style="color: #c5e0b4; mso-themecolor: accent6; mso-themetint: 102; mso-style-textfill-fill-color: #C5E0B4; mso-style-textfill-fill-themecolor: accent6; mso-style-textfill-fill-alpha: 100.0%; mso-style-textfill-fill-colortransforms: 'lumm=40000 lumo=60000';">chennai</span>
+    //       </p>
+    //     </td>
+    //   </tr>
+    // </tbody>
+    // </table>
+    // </<div>
+    // <p>Pac Rim 1.0    <span style="color:red;">REVISED 07/29/2022</span>    Pacific Rim ISG Intellectual Property - All Rights Reserved</p>`
   );
 
   fs.writeFile(filePath, fileBuffer, (error) => {

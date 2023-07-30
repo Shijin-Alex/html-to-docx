@@ -92,49 +92,49 @@ async function generateSectionXML(vTree, type = 'header') {
 
   const XMLFragment = fragment();
   await convertVTreeToXML(this, vTree, XMLFragment);
-  if (type === 'footer' && XMLFragment.first().node.tagName === 'p' && this.pageNumber) {
-    XMLFragment.last().import(
-      fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'r')
-        .ele('@w', 'pPr')
-        .ele('@w', 't')
-        .att('xml:space', 'preserve')
-        .txt(' ')
-        .up()
-        .up()
-        .up()
-    );
+  // if (type === 'footer' && XMLFragment.first().node.tagName === 'p' && this.pageNumber) {
+  //   XMLFragment.last().import(
+  //     fragment({ namespaceAlias: { w: namespaces.w } })
+  //       .ele('@w', 'r')
+  //       .ele('@w', 'pPr')
+  //       .ele('@w', 't')
+  //       .att('xml:space', 'preserve')
+  //       .txt(' Page ')
+  //       .up()
+  //       .up()
+  //       .up()
+  //   );
 
-    XMLFragment.last().import(
-      fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'fldSimple')
-        .att('@w', 'instr', 'PAGE')
-        .ele('@w', 'r')
-        .up()
-        .up()
-    );
+  //   XMLFragment.last().import(
+  //     fragment({ namespaceAlias: { w: namespaces.w } })
+  //       .ele('@w', 'fldSimple')
+  //       .att('@w', 'instr', 'PAGE')
+  //       .ele('@w', 'r')
+  //       .up()
+  //       .up()
+  //   );
 
-    XMLFragment.last().import(
-      fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'r')
-        .ele('@w', 'pPr')
-        .ele('@w', 't')
-        .att('xml:space', 'preserve')
-        .txt(' of ')
-        .up()
-        .up()
-        .up()
-    );
+  //   XMLFragment.last().import(
+  //     fragment({ namespaceAlias: { w: namespaces.w } })
+  //       .ele('@w', 'r')
+  //       .ele('@w', 'pPr')
+  //       .ele('@w', 't')
+  //       .att('xml:space', 'preserve')
+  //       .txt(' of ')
+  //       .up()
+  //       .up()
+  //       .up()
+  //   );
 
-    XMLFragment.last().import(
-      fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'fldSimple')
-        .att('@w', 'instr', 'NUMPAGES')
-        .ele('@w', 'r')
-        .up()
-        .up()
-    );
-  }
+  //   XMLFragment.last().import(
+  //     fragment({ namespaceAlias: { w: namespaces.w } })
+  //       .ele('@w', 'fldSimple')
+  //       .att('@w', 'instr', 'NUMPAGES')
+  //       .ele('@w', 'r')
+  //       .up()
+  //       .up()
+  //   );
+  // }
   sectionXML.root().import(XMLFragment);
   const referenceName = type === 'header' ? 'Header' : 'Footer';
   this[`last${referenceName}Id`] += 1;
