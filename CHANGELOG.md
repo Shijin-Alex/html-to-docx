@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.6](https://github.com/ansal-exp/html-to-docx/compare/v1.8.5...v1.8.6) (2023-07-31)
+
+
+### Bug Fixes
+
+* footer and page number issues ([0c77f82](https://github.com/ansal-exp/html-to-docx/commit/0c77f8279737ebc4ee1174c1ad1693526642bf0c))
+
 ### [1.8.5](https://github.com/ansal-exp/html-to-docx/compare/v1.8.4...v1.8.5) (2023-07-31)
 
 
