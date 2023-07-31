@@ -185,21 +185,23 @@ async function addFilesToContainer(
       fileNameWithExt,
       internalRelationship
     );
-    // const XMLFragment = fragment();
     const XMLFragment = fragment({ namespaceAlias: { w: namespaces.w } })
-      .ele('@w', 'p')
+      .ele('@w', 'r')
+      .ele('@w', 'rPr')
+      .ele('@w', 'sz')
+      .att('@w', 'val', '20')
+      .up()
+      .up()
       .up();
-
-    // console.log('XMLFragment:', XMLFragment.toString());
 
     const footerXMLString = footerXML.toString({ prettyPrint: true });
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'r')
-        .ele('@w', 'pPr')
+        .ele('@w', 'rPr')
         .ele('@w', 't')
         .att('xml:space', 'preserve')
-        .txt(' Page ')
+        .txt('Page ')
         .up()
         .up()
         .up()
@@ -210,6 +212,16 @@ async function addFilesToContainer(
         .ele('@w', 'fldSimple')
         .att('@w', 'instr', 'PAGE')
         .ele('@w', 'r')
+        .ele('@w', 'rPr')
+        .ele('@w', 'b')
+        .up()
+        .ele('@w', 'sz')
+        .att('@w', 'val', '20')
+        .up()
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' ')
+        .up()
         .up()
         .up()
     );
@@ -217,7 +229,10 @@ async function addFilesToContainer(
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'r')
-        .ele('@w', 'pPr')
+        .ele('@w', 'rPr')
+        .ele('@w', 'sz')
+        .att('@w', 'val', '20')
+        .up()
         .ele('@w', 't')
         .att('xml:space', 'preserve')
         .txt(' of ')
@@ -231,11 +246,31 @@ async function addFilesToContainer(
         .ele('@w', 'fldSimple')
         .att('@w', 'instr', 'NUMPAGES')
         .ele('@w', 'r')
+        .ele('@w', 'rPr')
+        .ele('@w', 'b')
+        .up()
+        .ele('@w', 'sz')
+        .att('@w', 'val', '20')
+        .up()
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' ')
+        .up()
         .up()
         .up()
     );
+
+    XMLFragment.first().import(
+      fragment({ namespaceAlias: { w: namespaces.w } })
+        .ele('@w', 'r')
+        .ele('@w', 't')
+        .att('xml:space', 'preserve')
+        .txt(' ')
+        .up()
+        .up()
+    );
+
     const fragmentString = XMLFragment.toString({ prettyPrint: true });
-    // const ftrSplits = footerXMLString.split('Page');
     const index = footerXMLString.lastIndexOf('Page');
     let footerStr = footerXMLString;
 
@@ -245,19 +280,9 @@ async function addFilesToContainer(
       const tsIndex = first.lastIndexOf('<');
       const tcIndex = last.indexOf('>');
       first = first.substring(0, tsIndex);
-      last = last.substring(tcIndex);
+      last = last.substring(tcIndex + 1);
       footerStr = first + fragmentString + last;
     }
-
-    // if (ftrSplits.length > 1) {
-    //   const secondLastItem = ftrSplits[ftrSplits.length - 2];
-    //   const lastItem = ftrSplits[ftrSplits.length - 1];
-    //   const index = secondLastItem.lastIndexOf('<');
-    //   ftrSplits[ftrSplits.length - 2] = secondLastItem.substring(0, index);
-    //   const index1 = lastItem.indexOf('>');
-    //   ftrSplits[ftrSplits.length - 1] = fragmentString + lastItem.substring(index1);
-    // }
-    // const footerStr = ftrSplits.join('');
 
     zip.folder(wordFolder).file(fileNameWithExt, footerStr, {
       createFolders: false,
