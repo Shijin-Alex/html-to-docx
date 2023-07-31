@@ -1592,6 +1592,7 @@ const buildCellMargin = (side, margin) =>
     .att('@w', 'w', String(margin))
     .up();
 
+// eslint-disable-next-line no-unused-vars
 const buildTableCellMargins = (margin) => {
   const tableCellMarFragment = fragment({ namespaceAlias: { w: namespaces.w } }).ele(
     '@w',
@@ -1642,8 +1643,8 @@ const buildTableProperties = (attributes) => {
       }
     });
   }
-  const tableCellMarginFragment = buildTableCellMargins(160);
-  tablePropertiesFragment.import(tableCellMarginFragment);
+  // const tableCellMarginFragment = buildTableCellMargins(160);
+  // tablePropertiesFragment.import(tableCellMarginFragment);
 
   // by default, all tables are center aligned.
   const alignmentFragment = buildHorizontalAlignment('center');
