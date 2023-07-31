@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.7](https://github.com/ansal-exp/html-to-docx/compare/v1.8.6...v1.8.7) (2023-07-31)
+
+
+### Bug Fixes
+
+* table cell margin ([68953d8](https://github.com/ansal-exp/html-to-docx/commit/68953d865dc8b3d510961f8bec452e29c3314ee1))
+
 ### [1.8.6](https://github.com/ansal-exp/html-to-docx/compare/v1.8.5...v1.8.6) (2023-07-31)
 
 
