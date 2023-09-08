@@ -327,6 +327,15 @@ const modifiedStyleAttributesBuilder = (docxDocumentInstance, vNode, attributes,
     if (vNode.properties.style['font-weight'] && vNode.properties.style['font-weight'] === 'bold') {
       modifiedAttributes.strong = vNode.properties.style['font-weight'];
     }
+    if (vNode.properties.style['font-style'] && vNode.properties.style['font-style'] === 'italic') {
+      modifiedAttributes.i = vNode.properties.style['font-style'];
+    }
+    if (
+      vNode.properties.style['text-decoration'] &&
+      vNode.properties.style['text-decoration'] === 'underline'
+    ) {
+      modifiedAttributes.u = vNode.properties.style['text-decoration'];
+    }
     if (vNode.properties.style['font-family']) {
       modifiedAttributes.font = docxDocumentInstance.createFont(
         vNode.properties.style['font-family']
