@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.12](https://github.com/ansal-exp/html-to-docx/compare/v1.8.11...v1.8.12) (2023-09-08)
+
+### [1.8.11](https://github.com/ansal-exp/html-to-docx/compare/v1.8.10...v1.8.11) (2023-09-08)
+
+
+### Bug Fixes
+
+* add italics and underline ([7a7317e](https://github.com/ansal-exp/html-to-docx/commit/7a7317ed3976fdf32d96011fd9076e3125619426))
+
+### [1.8.10](https://github.com/ansal-exp/html-to-docx/compare/v1.8.9...v1.8.10) (2023-09-08)
+
+### [1.8.9](https://github.com/ansal-exp/html-to-docx/compare/v1.8.7...v1.8.9) (2023-09-08)
+
 ### [1.8.7](https://github.com/ansal-exp/html-to-docx/compare/v1.8.6...v1.8.7) (2023-07-31)
 
 
