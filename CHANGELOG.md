@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.13](https://github.com/ansal-exp/html-to-docx/compare/v1.8.12...v1.8.13) (2023-10-10)
+
+
+### Bug Fixes
+
+* Add italics and underline style properties ([246fd2d](https://github.com/ansal-exp/html-to-docx/commit/246fd2d5d17ffca7a23144cc948015a35d939c8a))
+* cell padding, page number bold ([f9756d8](https://github.com/ansal-exp/html-to-docx/commit/f9756d8504b64119e6e1f65f1b2edbb3e61cfce8))
+
 ### [1.8.12](https://github.com/ansal-exp/html-to-docx/compare/v1.8.11...v1.8.12) (2023-09-08)
 
 ### [1.8.11](https://github.com/ansal-exp/html-to-docx/compare/v1.8.10...v1.8.11) (2023-09-08)
