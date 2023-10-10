@@ -195,10 +195,91 @@ async function addFilesToContainer(
       .up();
 
     const footerXMLString = footerXML.toString({ prettyPrint: true });
+    // XMLFragment.first().import(
+    //   fragment({ namespaceAlias: { w: namespaces.w } })
+    //     .ele('@w', 'r')
+    //     .ele('@w', 'rPr')
+    //     .ele('@w', 'b')
+    //     .up()
+    //     .ele('@w', 't')
+    //     .att('xml:space', 'preserve')
+    //     .txt('Page ')
+    //     .up()
+    //     .up()
+    //     .up()
+    // );
+
+    // XMLFragment.first().import(
+    //   fragment({ namespaceAlias: { w: namespaces.w } })
+    //     .ele('@w', 'fldSimple')
+    //     .att('@w', 'instr', 'PAGE')
+    //     .ele('@w', 'r')
+    //     .ele('@w', 'rPr')
+    //     .ele('@w', 'b')
+    //     .up()
+    //     .ele('@w', 'sz')
+    //     .att('@w', 'val', '20')
+    //     .up()
+    //     .ele('@w', 't')
+    //     .att('xml:space', 'preserve')
+    //     .txt(' ')
+    //     .up()
+    //     .up()
+    //     .up()
+    // );
+
+    // XMLFragment.first().import(
+    //   fragment({ namespaceAlias: { w: namespaces.w } })
+    //     .ele('@w', 'r')
+    //     .ele('@w', 'rPr')
+    //     .ele('@w', 'sz')
+    //     .att('@w', 'val', '20')
+    //     .up()
+    //     .ele('@w', 't')
+    //     .att('xml:space', 'preserve')
+    //     .txt(' of ')
+    //     .up()
+    //     .up()
+    //     .up()
+    // );
+
+    // XMLFragment.first().import(
+    //   fragment({ namespaceAlias: { w: namespaces.w } })
+    //     .ele('@w', 'fldSimple')
+    //     .att('@w', 'instr', 'NUMPAGES')
+    //     .ele('@w', 'r')
+    //     .ele('@w', 'rPr')
+    //     .ele('@w', 'b')
+    //     .up()
+    //     .ele('@w', 'sz')
+    //     .att('@w', 'val', '20')
+    //     .up()
+    //     .up()
+    //     .ele('@w', 't')
+    //     .att('xml:space', 'preserve')
+    //     .txt(' ')
+    //     .up()
+    //     .up()
+    //     .up()
+    // );
+
+    // XMLFragment.first().import(
+    //   fragment({ namespaceAlias: { w: namespaces.w } })
+    //     .ele('@w', 'r')
+    //     .ele('@w', 't')
+    //     .att('xml:space', 'preserve')
+    //     .txt(' ')
+    //     .up()
+    //     .up()
+    // );
+
+    // 'Page'
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'r')
         .ele('@w', 'rPr')
+        // .ele('@w', 'b')
+        // .up()
         .ele('@w', 't')
         .att('xml:space', 'preserve')
         .txt('Page ')
@@ -207,10 +288,15 @@ async function addFilesToContainer(
         .up()
     );
 
+    // Page number
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'fldSimple')
-        .att('@w', 'instr', 'PAGE')
+        .ele('@w', 'r')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'begin')
+        .up()
+        .up()
+
         .ele('@w', 'r')
         .ele('@w', 'rPr')
         .ele('@w', 'b')
@@ -218,14 +304,26 @@ async function addFilesToContainer(
         .ele('@w', 'sz')
         .att('@w', 'val', '20')
         .up()
-        .ele('@w', 't')
-        .att('xml:space', 'preserve')
-        .txt(' ')
         .up()
+        .ele('@w', 'instrText')
+        .txt('PAGE')
+        .up()
+        .up()
+
+        .ele('@w', 'r')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'seperate')
+        .up()
+        .up()
+
+        .ele('@w', 'r')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'end')
         .up()
         .up()
     );
 
+    // ' of '
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'r')
@@ -241,10 +339,15 @@ async function addFilesToContainer(
         .up()
     );
 
+    // total pages
     XMLFragment.first().import(
       fragment({ namespaceAlias: { w: namespaces.w } })
-        .ele('@w', 'fldSimple')
-        .att('@w', 'instr', 'NUMPAGES')
+        .ele('@w', 'r')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'begin')
+        .up()
+        .up()
+
         .ele('@w', 'r')
         .ele('@w', 'rPr')
         .ele('@w', 'b')
@@ -252,20 +355,21 @@ async function addFilesToContainer(
         .ele('@w', 'sz')
         .att('@w', 'val', '20')
         .up()
-        .ele('@w', 't')
-        .att('xml:space', 'preserve')
-        .txt(' ')
+        .up()
+        .ele('@w', 'instrText')
+        .txt('NUMPAGES')
         .up()
         .up()
-        .up()
-    );
 
-    XMLFragment.first().import(
-      fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'r')
-        .ele('@w', 't')
-        .att('xml:space', 'preserve')
-        .txt(' ')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'seperate')
+        .up()
+        .up()
+
+        .ele('@w', 'r')
+        .ele('@w', 'fldChar')
+        .att('@w', 'fldCharType', 'end')
         .up()
         .up()
     );
@@ -282,6 +386,7 @@ async function addFilesToContainer(
       first = first.substring(0, tsIndex);
       last = last.substring(tcIndex + 1);
       footerStr = first + fragmentString + last;
+      // console.log('fffffffffff: ', fragmentString + fffString + last);
     }
 
     zip.folder(wordFolder).file(fileNameWithExt, footerStr, {

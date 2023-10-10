@@ -1599,10 +1599,10 @@ const buildTableCellMargins = (margin) => {
     'tblCellMar'
   );
 
-  ['top', 'bottom'].forEach((side) => {
-    const marginFragment = buildCellMargin(side, margin / 2);
-    tableCellMarFragment.import(marginFragment);
-  });
+  // ['top', 'bottom'].forEach((side) => {
+  //   const marginFragment = buildCellMargin(side, margin / 2);
+  //   tableCellMarFragment.import(marginFragment);
+  // });
   ['left', 'right'].forEach((side) => {
     const marginFragment = buildCellMargin(side, margin);
     tableCellMarFragment.import(marginFragment);
@@ -1643,8 +1643,8 @@ const buildTableProperties = (attributes) => {
       }
     });
   }
-  // const tableCellMarginFragment = buildTableCellMargins(160);
-  // tablePropertiesFragment.import(tableCellMarginFragment);
+  const tableCellMarginFragment = buildTableCellMargins(160);
+  tablePropertiesFragment.import(tableCellMarginFragment);
 
   // by default, all tables are center aligned.
   const alignmentFragment = buildHorizontalAlignment('center');
